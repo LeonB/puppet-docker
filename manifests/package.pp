@@ -1,7 +1,7 @@
 class docker::package {
 
     package  { $docker::packages:
-        ensure => $docker::ensure,
+        ensure  => $docker::ensure,
         require => Apt::Source['docker'],
     }
 

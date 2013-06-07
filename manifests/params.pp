@@ -14,12 +14,12 @@
 #
 class docker::params {
 
-	### Application related parameters
+  ### Application related parameters
 
-	$packages = $::operatingsystem ? {
-		default => ['lxc-docker', "linux-image-extra-${kernelrelease}"]
-	}
+  $packages = $::operatingsystem ? {
+    default => ['lxc-docker', "linux-image-extra-${::kernelrelease}"]
+  }
 
-	$enabled = true
+  $enabled = true
 
 }
